@@ -1,7 +1,7 @@
 Using Transformers to Statically Predict Stack Size Usage of Binary Code
 ---
 
-This is the repository containing the code for our ACM AISec'21 paper "StackBERT: Machine Learning Assisted Static Stack Frame Size Recovery on Stripped and Optimized Binaries". Our training sets and pretrained models are hosted on Google Drive.
+This is the repository containing the code for our ACM AISec'21 paper ["StackBERT: Machine Learning Assisted Static Stack Frame Size Recovery on Stripped and Optimized Binaries"](https://dl.acm.org/doi/10.1145/3474369.3486865). Our training sets and pretrained models are hosted on Google Drive.
 
 ### Auto-Generating Labels from Open-Source Software
 Both LLVM and GCC provide builtin solutions to obtain per-function stack frame sizes during compilation, enabling auto-generation of large amounts of training samples:
@@ -46,3 +46,23 @@ Drive Link: https://drive.google.com/drive/folders/1HUGc2xzKbGUFeCxIB30t_MhrNmbP
 Compilers used: GCC 11.1.0 and LLVM 13.0.0. We compile all binaries for both AMD64 and AArch64.
 
 We cannot distribute SPEC 2017 binaries for licensing reasons, but the workflow for building them is exactly the same as for the training set.
+
+### Please cite as follows
+```
+@inproceedings{aisec2021stackbert,
+    author = {Deshpande, Chinmay and Gens, David and Franz, Michael},
+    title = {StackBERT: Machine Learning Assisted Static Stack Frame Size Recovery on Stripped and Optimized Binaries},
+    year = {2021},
+    isbn = {9781450386579},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3474369.3486865},
+    doi = {10.1145/3474369.3486865},
+    booktitle = {Proceedings of the 14th ACM Workshop on Artificial Intelligence and Security},
+    pages = {85–95},
+    numpages = {11},
+    keywords = {recompilation, machine learning, stack symbolization, binary lifting},
+    location = {Virtual Event, Republic of Korea},
+    series = {AISec '21}
+}
+```
